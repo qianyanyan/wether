@@ -1,0 +1,102 @@
+/**index.wxss**/
+.weatherImg{
+  width:30px;
+  height:30px;
+}
+.weatherHead{
+  width:60px;
+  height:60px;
+}
+.nolocation{
+  width: 100%;
+  height:100%;
+  background: 	#6495ED;
+}
+.locationImg{
+  width:100px;
+  height:100px;
+  margin:auto;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  
+}
+.location{
+  width: 100%;
+  height:100%;
+  background: 	#6495ED;
+}
+.cityContent{
+  width:100%;
+  height:60px;
+  line-height:60px;
+  text-align:center;
+  color:#fff;
+  
+}
+.city{
+  width:100%;
+  height:40px;
+  line-height:40px;
+  text-align:center;
+  color:#fff;
+  /* font-size:40px; */
+
+  
+}
+.cityData{
+  display: inline-block;
+  margin-right:20px;
+}
+.float_L{
+  float: left;
+  
+}
+.w50{
+ width:50%;
+}
+.font45{
+  font-size: 45px;
+}
+.color_w{
+  color:#fff;
+}
+.text_c{
+  text-align: center;
+  margin-top:15px;
+
+}
+.w90{
+  width:90%;
+}
+.margin-a{
+  margin:auto;
+}
+.line4{
+  line-height:32px;
+font-size:14px;
+margin-top:62px;
+
+}
+.scrollContainer{
+  width:100%;
+  height:250rpx;
+  position: absolute;
+  color:#fff;
+  overflow: hidden;
+  white-space: nowrap; 
+  display: flex;
+  bottom: 0;
+  left:0
+
+}
+.scrollBox{
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  overflow: hidden;
+  font-size: 14px;
+  height:250rpx
+}

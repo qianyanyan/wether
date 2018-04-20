@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="container">
+
+    <view class='nolocation' wx:if='{{locationstatus==false}}'>
+     
+         <image class='locationImg' src="../../resourse/location/weather.svg" animation='{{}}'></image> 
+      
+    </view>
+    <view wx:if='{{locationstatus==true}}' class='location'>
+       <view class='cityContent'> 当前城市 </view>
+            <view class='city'>
+            <view class='cityData'> {{userMsg.userCity}}</view> 
+            <view class='cityData'>{{userMsg.userdate}}</view>
+            </view>
+            
+            <view style='text-align:center;margin-top:20px;'> 
+                   <view class='w100' style='margin-bottom:10px;'>
+                       <image src='../../resourse/img/{{userMsg.weatherImg}}.png' wx:if='{{userMsg.weatherImg}}' class='weatherHead'></image>
+                   </view>
+                  
+                   <view class=' w100 font45 color_w'>{{weatherMsg.temp}} ℃</view>
+            </view> 
+         
+            <view class='text_c color_w'>
+              {{weatherMsg.templow}}℃/{{weatherMsg.tempHigh}}℃
+            </view>
+            <view class='text_c color_w w90 margin-a line4'>
+              {{weatherMsg.MovementIndex}}
+            </view>
+            <view class="scrollContainer">
+                <scroll-view scroll-x="true" class=''>
+                    <view wx:for='{{weatherMsg.hourly}}' wx:key='index' class="scrollBox">
+                       <view>{{item.time}}</view>
+                       <view>
+                            <image src='../../resourse/img/{{item.img}}.png'  class='weatherImg'></image>
+                       </view>
+                       <view>{{item.temp}}℃</view>
+                      
+                       <view>{{item.weather}}</view>
+                       
+                    </view>
+                </scroll-view>
+            </view>
+    </view>
+    
+</view>
